@@ -2,13 +2,24 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>MBTI 확인기</title>
+  <title> 정보모음 </title>
 </head>
 <body>
-  <h1>MBTI 확인기</h1>
-  <input type="text" id="nameInput" placeholder="이름을 입력하세요" />
-  <button onclick="checkMBTI()">확인</button>
-  <p id="result"></p>
+  <!-- 잠금 화면 -->
+  <div id="lockScreen">
+    <h2>비밀번호를 입력하세요</h2>
+    <input type="password" id="passwordInput" placeholder="비밀번호 입력" />
+    <button onclick="unlock()">입장</button>
+    <p id="passwordMessage" style="color:red;"></p>
+  </div>
+
+  <!-- 본 기능 화면 -->
+  <div id="mainContent" style="display:none;">
+    <h1>MBTI </h1>
+    <input type="text" id="nameInput" placeholder="이름을 입력하세요" />
+    <button onclick="checkMBTI()">확인</button>
+    <p id="result"></p>
+  </div>
 
   <script src="script.js"></script>
 </body>
