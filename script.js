@@ -1,6 +1,3 @@
-const correctPassword = "qorwldn"; // 원하는 비밀번호로 변경 가능
-
-
 
 const peopleMBTI = {
   "김가연": "ESTJ",
@@ -161,26 +158,12 @@ const peopleMBTI = {
   "한다윤": "INFP",
   "허나경": "ISTP"
 };
-
-
-function unlock() {
-  const input = document.getElementById("passwordInput").value;
-  const message = document.getElementById("passwordMessage");
-
-  if (input === correctPassword) {
-    document.getElementById("lockScreen").style.display = "none";
-    document.getElementById("mainContent").style.display = "block";
-  } else {
-    message.textContent = "비밀번호가 틀렸습니다.";
-  }
-}
-
 function checkMBTI() {
   const name = document.getElementById("nameInput").value.trim();
   const result = document.getElementById("result");
 
   if (peopleMBTI[name]) {
-    result.textContent = `${name}의 MBTI: ${peopleMBTI[name]}.`;
+    result.textContent = `${name}의 MBTI: ${peopleMBTI[name]}`;
   } else {
     result.textContent = `${name}의 MBTI 정보 없음`;
   }
