@@ -164,7 +164,7 @@ function checkMBTI() {
   const result = document.getElementById("result");
 
   if (peopleMBTI[name]) {
-    result.textContent = `${name}의 MBTI: ${peopleMBTI[name]}입니다.`;
+    result.textContent = `${name}의 MBTI: ${peopleMBTI[name]}.`;
   } else {
     result.textContent = `${name}의 MBTI 정보 없음`;
   }
